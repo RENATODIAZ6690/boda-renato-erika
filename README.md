@@ -1,1 +1,70 @@
 # boda-renato-erika
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invitación de Boda R&E</title>
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      background: #fefdf9;
+      text-align: center;
+    }
+    .container {
+      padding: 20px;
+    }
+    .envelope {
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }
+    .seal {
+      width: 80px;
+      margin: 20px auto;
+    }
+    .button {
+      background: #6f7f68;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="intro">
+    <img class="envelope" src="img/intro1.png" alt="Sobre" onclick="showInvitation()" />
+    <button class="button" onclick="showInvitation()">Continuar</button>
+  </div>
+
+  <div class="container hidden" id="invitation">
+    <img src="img/invitacion2.png" alt="Invitación" onclick="showFullInvitation()" />
+  </div>
+
+  <div class="container hidden" id="full">
+    <img src="img/parte3.png" alt="Parte 3" />
+    <img src="img/parte4.png" alt="Parte 4" />
+  </div>
+
+  <script>
+    function showInvitation() {
+      document.getElementById("intro").classList.add("hidden");
+      document.getElementById("invitation").classList.remove("hidden");
+    }
+
+    function showFullInvitation() {
+      document.getElementById("invitation").classList.add("hidden");
+      document.getElementById("full").classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
